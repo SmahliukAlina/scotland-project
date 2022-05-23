@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I love Scotland ⛰️</title>
+    <style>
+      h1,
+      h2,
+      .main-text,
+      .learn-more {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h2,
+      .main-text,
+      .footer {
+        color: #283739;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c5d63;
+        font-size: 45px;
+      }
+
+      h2 {
+        text-align: center;
+        border: 2px solid #2c5d63;
+        padding: 15px;
+        margin: 10px;
+        font-size: 30px;
+        border-radius: 4px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        max-width: 90%;
+        border-radius: 15px;
+      }
+
+      .main-text {
+        line-height: 1.5;
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: #283739;
+        color: #a2c11c;
+        font-size: 30px;
+        border-radius: 4px;
+        box-shadow: 10px 5px 5px #2c5d63;
+        padding: 10px 15px;
+        margin-top: 15px;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        cursor: pointer;
+        opacity: 0.9;
+        color: #e0e0e0;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 10px 50px 15px;
+        background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+        border-radius: 10px;
+      }
+
+      .learn-more-link {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #2c5d63;
+        font-size: 15px;
+      }
+
+      .learn-more-link:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+        font-family: monospace;
+        font-weight: 500;
+      }
+
+      .creator-name-link {
+        text-decoration: none;
+        color: #283739;
+        transition: all 200ms ease-in-out;
+      }
+
+      .creator-name-link:hover {
+        color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love Scotland</h1>
+
+      <h2><em>Especially its sceneries</em></h2>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/033/162/original/7493a191de5a82c29b247c22c088564b.jpg?1651411797"
+        title="Scotland"
+        alt="Scotland"
+      />
+
+      <span class="main-text"
+        ><strong>Scotland</strong> is a country that is part of the United
+        Kingdom. Covering the northern third of the island of Great Britain,
+        mainland Scotland has a 96-mile (154-kilometre) border with England to
+        the southeast and is otherwise surrounded by the Atlantic Ocean to the
+        north and west, the North Sea to the northeast and the Irish Sea to the
+        south. The country also contains more than 790 islands, principally in
+        the archipelagos of the Hebrides and the Northern Isles.
+        <br />
+        <a
+          href="https://en.wikipedia.org/wiki/Scotland"
+          target="_blank"
+          class="learn-more-link"
+          >Learn more on Wikipedia</a
+        >
+      </span>
+
+      <button>👉🏽 Want to go to Scotland</button>
+      <hr />
+
+      <p class="footer">
+        This page is created by
+        <a
+          href="https://www.linkedin.com/in/alina-smahliuk-a945bba8/"
+          target="_blank"
+          class="creator-name-link"
+          >Alina Smahliuk</a
+        >
+      </p>
+    </div>
+    <script>
+      function goToScotland() {
+        let userName = prompt("What is your name?");
+        let userAge = prompt("How old are you?");
+        let userEmail;
+
+        if (userAge < 18) {
+          alert(
+            `Sorry, ${userName}, but you have to be older to make this trip 😔`
+          );
+        } else {
+          userEmail = prompt("What is your email?");
+          alert(
+            `Thank you, ${userName}, we will send you all the information about trip 🌍 to your email: ${userEmail}`
+          );
+        }
+      }
+
+      let goToButton = document.querySelector("button");
+      goToButton.addEventListener("click", goToScotland);
+    </script>
+  </body>
+</html>
